@@ -1,0 +1,2 @@
+//Sleep - when we make a thread sleep, it ll wait for the particular time.. all the threads ll run in parallel
+//wait - stop all other execution.. till the current thread with resource execution stops. exec.three threads access three resources-wait till it finishes. only then next three threads are given access to the resources
