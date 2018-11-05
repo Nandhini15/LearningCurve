@@ -1,2 +1,18 @@
 //Sleep - when we make a thread sleep, it ll wait for the particular time.. all the threads ll run in parallel
 //wait - stop all other execution.. till the current thread with resource execution stops. exec.three threads access three resources-wait till it finishes. only then next three threads are given access to the resources
+//process - block of code
+//4 thread - 4 process - using a single resource..if one thread is utilizing the resources, other threads must wait for the resource to be freed down.
+//Mutual - process one at a toime, resource many at the same time
+//hold & wait - process and resources one at a time
+//No preemption..resource can handle many process at the same time whereas, the process can only handle one resource and it can request one resource at the same time
+//circular wait - Process(thread) holding resources in a circular way, each must release resource only then it would be accessible by the other one.
+//deadlock is good if u rmaintaining the order, but in some scenario if they fail to maintain the flow, eg bank then it is a pblm
+//to avoid this giving extra security - avoidance
+//Safe state - till the state all the transactions r compltd it ll b in lock state, if done it lll b in commit state else it ll go to revoke state
+//lock,, rollback then commit
+//Bankers algo.. transac btw a and b.. a amount sent..rollback point created as flag =1, wait ll the time b updates and
+//a receives a msg add, else rollback done.. also flag is set in b.. so only if the amount is minused from a, then its added to a..both side success msg
+//Resouce alloc graph: pictorial alloc of resources to processes
+//Deadlock acoidance: situations to overcome deadlock scenario.. to overcome deadlock leakages
+//dead prevention: s/m is huilt in a way tat it doesnt encounters any of the above mentioned scenarios
+//Deadlock detection: 
