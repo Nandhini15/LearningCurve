@@ -1,0 +1,237 @@
+.navbar{
+ background-color: #F4F8FB;
+}
+
+.navbar-fixed-top .navbar-nav > li > a, .navbar .navbar-nav > li > a, .navbar .navbar-toggle{
+  transition: all 0.5s;
+}
+
+.navbar-toggle{
+  display: block;
+  color: white;
+}
+
+
+#navbar-container {
+ padding: 20px;
+ background-color: #333;
+ width: 100%;
+ height: 100px;
+}
+
+.navbar-brand img{
+ padding: 0;
+ max-width: 200px;
+ margin-bottom: 0%;
+}
+
+#slide-bar1{
+ margin-top: 5%;
+}
+
+#slide-bar2{
+ margin-top: 5%;
+}
+
+li a {
+ color: white;
+}
+
+header.home-header{
+ text-align: left;
+ background-image: url("../img/pexels-photo-97079.jpeg");
+ background-attachment: fixed;
+ background-position: center;
+ padding: 140px;
+}
+
+header.home-header .header-content .header-title{
+ text-align: left;
+ padding-top: 5%;
+ padding-left: 5%;
+}
+body {font-family: Arial, Helvetica, sans-serif;}
+
+header.header-title{
+ margin-left: 0px;
+ margin-top: 20px;
+}
+
+header.text-justify{
+ text-align: left;
+ font-size: 20px;
+ font-family: serif;
+}
+
+header.information{
+ margin-left: 150px;
+ width:100px;
+ height: 27px;
+ bottom: 0px;
+ }
+
+.section-in{
+ text-align: center;
+ margin-bottom: 40px;
+}
+
+.left-sec{
+ height:200px;
+ background: #e5e5e5;
+ margin-bottom: 60px;
+}
+
+.right-sec{
+ height:200px;
+ background: #e5e5e5;
+ margin-bottom: 60px;
+}
+
+.left1-sec{
+ height:200px;
+ background: #e5e5e5;
+ margin-bottom: 60px;
+}
+
+.right1-sec{
+ height:200px;
+ background: #e5e5e5;
+ margin-bottom: 60px;
+}
+
+.box1,.box2,.box3,.box4{
+ background-color: grey;
+ text-align: center;
+ font-family: serif;
+}
+
+.long-copy{
+ text-align: center;
+ padding: auto;
+}
+
+.section-header{
+ width:100%;
+ text-align: center;
+ margin-bottom: 40px;
+}
+
+.situation_1{
+ margin-top: 20px;
+}
+
+.situation_2{
+ margin-top: 150px;
+}
+
+.situation_3{
+ margin-top: 20px;
+}
+
+.situation_4{
+ margin-top: 150px;
+}
+
+.toggle-switch{
+ width: 110px;
+
+}
+
+.situation .panel-body{
+ font-size: 16px;
+}
+
+.marginBottom {
+ margin-bottom: 60px;
+ margin-left: 60px;
+}
+
+.footer .widget-title{
+ margin-left: 25px;
+ margin-bottom: 2%;
+}
+
+#buySell ul {
+ background-color: transparent;
+ margin-left: 40px;
+}
+
+#content-head{
+ background-color: #e6e6e6;
+
+}
+
+#content-container{
+ padding-top: 80px;
+}
+
+#situation_image{
+ padding-bottom: 50px;
+ background-attachment: fixed;
+}
+#search-intro{
+  padding-bottom: 100px;
+  background-attachment: fixed;
+}
+
+.container-fluid {
+ padding: 0;
+}
+
+.situation-table{
+ background-color: #e6e6e6;
+}
+
+#text-section{
+ text-align: justify;
+ font-size: 16px;
+}
+
+#footer_color{
+ background-color:#ffffff;
+}
+
+#about-author{
+ margin-bottom: 5%;
+}
+
+select {
+ width: 200px;
+ height: 30px;
+ margin: 10px;
+}
+
+.location-name{
+ font-size: 16px;
+}
+
+.location-name input{
+ width: 250px;
+ height: 32px;
+ background: #fcfcfc;
+ border: 1px solid #aaa;
+ border-radius: 5px;
+ box-shadow: 0 0 3px #ccc, 0 10px 15px #ebebeb inset;
+ text-indent: 32px;
+}
+
+.location-id select{
+ width: 250px;
+ height: 32px;
+ background: #fcfcfc;
+ border: 1px solid #aaa;
+ border-radius: 5px;
+ box-shadow: 0 0 3px #ccc, 0 10px 15px #ebebeb inset;
+ text-indent: 32px;
+}
+
+.location-name .glyphicon-search{
+ position: absolute;
+ top: 10px;
+ margin-left: 200px;
+}
+
+#pricing-range{
+ margin-left: 40%;
+ margin-top: 2%;
+}
