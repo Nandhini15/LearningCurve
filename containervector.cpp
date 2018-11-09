@@ -33,5 +33,15 @@ int main() {
     cout<<*p<<endl;
     for(auto i = a.begin(); i != a.end(); i++)
     cout<<*i<<"";
+    a.assign(5, 10);
+    for(int i = 0; i < a.size(); i++)
+    cout<<a[i]<<endl;
+    a.pop_back();
+    a.insert(a.begin(), 5);
+    a.erase(a.begin());
+    a.emplace(a.begin(), 5);
+    a.emplace_back(20);
+    //a.clear() -clears all the elt of a vector
+    //a.sway(b); - swaps two vectors
     return 0;
 }
