@@ -1,5 +1,5 @@
 #include <iostream> 
-#include <list> 
+#include <stack> 
 using namespace std; 
 int main() {
     stack<int> s;
@@ -10,7 +10,7 @@ int main() {
     s.push(50);
     cout<<s.size();
     s.top();
-    while(s != empty){
+    while(! s.empty()){
        cout<<s.top();
        s.pop();
     }
