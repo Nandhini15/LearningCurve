@@ -4,6 +4,7 @@
 using namespace std;
 //unique keys
 //no sorted order
+//unordered_multimap<string, double> a({{"root1", 3.14}, {"root2", 4.14}, {"root3", 5.46}, {"root4", 1}});
 int main()
 {
     unordered_map<string, double> a;
