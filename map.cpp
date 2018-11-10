@@ -1,7 +1,10 @@
 #include <iostream> 
 #include <map>
 #include <iterator>
-
+//colln of key value pairs
+//sorted by keys
+//unique keys
+//no two mapped values can share the same key - no <
 using namespace std; 
 int main()
 {
