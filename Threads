@@ -1,18 +1,32 @@
 //Sleep - when we make a thread sleep, it ll wait for the particular time.. all the threads ll run in parallel
-//wait - stop all other execution.. till the current thread with resource execution stops. exec.three threads access three resources-wait till it finishes. only then next three threads are given access to the resources
+//wait - stop all other execution.. till the current thread with resource execution stops. exec.three threads access 
+//three resources-wait till it finishes. only then next three threads are given access to the resources
 //process - block of code
-//4 thread - 4 process - using a single resource..if one thread is utilizing the resources, other threads must wait for the resource to be freed down.
-//Mutual - process one at a toime, resource many at the same time
-//hold & wait - process and resources one at a time
-//No preemption..resource can handle many process at the same time whereas, the process can only handle one resource and it can request one resource at the same time
-//circular wait - Process(thread) holding resources in a circular way, each must release resource only then it would be accessible by the other one.
+//4 thread - 4 process - using a single resource..if one thread is utilizing the resources, other threads must wait for the
+//resource to be freed down.
+//Mutual Exclusion - each process can access the resource only one at a time. non sharable mode.
+//hold & wait -  ie only one process.. many resource.. process accessing one, and in wait state for another resource
+//No preemption..resource can handle many process at the same time whereas, the process can only handle one resource and it 
+//can request one resource at the same time // a resource can only be released voluntarily by the process holding it
+//circular wait - Process(thread) holding resources in a circular way, each must release resource only then it would be accessible
+//by the other one.
 //deadlock is good if u rmaintaining the order, but in some scenario if they fail to maintain the flow, eg bank then it is a pblm
 //to avoid this giving extra security - avoidance
-//Safe state - till the state all the transactions r compltd it ll b in lock state, if done it lll b in commit state else it ll go to revoke state
+//Safe state - till the state all the transactions r compltd it ll b in lock state, if done it lll b in commit state else it ll go to 
+//revoke state
 //lock,, rollback then commit
 //Bankers algo.. transac btw a and b.. a amount sent..rollback point created as flag =1, wait ll the time b updates and
-//a receives a msg add, else rollback done.. also flag is set in b.. so only if the amount is minused from a, then its added to a..both side success msg
+//a receives a msg add, else rollback done.. also flag is set in b.. so only if the amount is minused from a, then its added to a.
+//.both side success msg
 //Resouce alloc graph: pictorial alloc of resources to processes
 //Deadlock acoidance: situations to overcome deadlock scenario.. to overcome deadlock leakages
 //dead prevention: s/m is huilt in a way tat it doesnt encounters any of the above mentioned scenarios
-//Deadlock detection: 
+//Deadlock: two process p1 and p2. two res r1 and r2. now, p1 access r1 and p2 access r2. p1 in turn request r2 and p2 request r1. 
+//both r in waiting state. Two threads waiting for eachother. this is called deadlock.
+//solution circular wait: numbering all the resource types. each process request resources in an increasing order of enum type
+//also preempt desired resources in the waiting state and issue it to the requesting process
+//deadlock recover: -process termination - resource preemption
+//PROCESS TERMINATION - Avoid all deadlock process: release all the process in the deadlock state and start it from beg.expensive 
+//                    - Abort one by one process till deadlock gets resolved - first abort one of the process in the deadlock state
+//Allocate the resource to some other process in the deadlock, then check whether the deadlock breaked
+//RESOURCE PREEMPTION - preempt some resource from a process and give these resource to some other process till the deadlock cycle is broken
