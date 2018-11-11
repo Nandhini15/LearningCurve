@@ -30,3 +30,47 @@
 //                    - Abort one by one process till deadlock gets resolved - first abort one of the process in the deadlock state
 //Allocate the resource to some other process in the deadlock, then check whether the deadlock breaked
 //RESOURCE PREEMPTION - preempt some resource from a process and give these resource to some other process till the deadlock cycle is broken
+//THREAD DESIGN PATTERNS: - Thread Pool (Boss/Worker) - Peer (Workcrew) - Pipeline
+//Thread Pool - One thread dispatches other threads to do useful work which are usually part of a worker thread pool. This thread pool is
+usually pre-allocated before the boss (or master) begins dispatching threads to work. Although threads are lightweight, they still incur 
+overhead when they are created.
+//Peer - The peer model is similar to the boss/worker model except once the worker pool has been created, the boss becomes the another 
+thread in the thread pool, and is thus, a peer to the other threads.
+//Pipeline - Similar to how pipelining works in a processor, each thread is part of a long chain in a processing factory. Each thread
+works on data processed by the previous thread and hands it off to the next thread. You must be careful to equally distribute work and 
+take extra steps to ensure non-blocking behavior in this thread model or you could experience pipeline "stalls."
+//ACCESSING SHARED RESOURCES:
+MUTUAL EXCLUSION: is a method of serializing access to shared resources - no write or dirty read(value being updated,ano thread reads old val)
+MUTEX: lock that can be virtually attached to some resources. so, till the time one thread access(read/write) a resource,
+all the other threads must wait.
+-once the thread finishes using the shared resource, it unlocks the mutex nd the res is available for other threads to access
+//CRITICAL SECTION - code between the lock and unlock calls to the mutex is refered to as critical section(shorter critical time pref)
+//MUTEX TYPES:
+RECURSIVE LOCK: allows the thread holding a lock to acquire further locks which may be necess for recursive algorithms.
+QUEUING: providing FIFO ordering to the arrival of lock requests. possibility to wake threads next in line that may be sleeping
+READER/WRITER : allows for multiple readers to acquire the lock simultaneously.If existing readers have the lock, a writer request
+on the lock will block until all readers have given up the lock. This can lead to writer starvation.
+DEADLOCK: two threads stopped execution permanently. U can prevent this by making sure that the threads acquire locks in agreed order
+Deadlock can also happen if threads do not unlock mutexes properly.
+RACE CONDITION: Two or more threads trying to access the shared resource at the same time
+ PRIORITY INVERSION; A higher priority thread can wait behind a lower priority thread if the lower priority thread holds a 
+ lock for which the higher priority thread is waiting. This can be eliminated/reduced by limiting the number of shared mutexes 
+ between different priority threads.
+ //the above mentioned (mainly mutex) deals with synchronizing access to shared resources
+ //SYNCHRONIZING THREADS: 
+// FORK_JOIN PARALLELISM: threads are spawned to tackle parallel tasks and then join back up to the main thread after completing their
+ respective tasks (thus performing an implicit barrier at the join point). Note that a thread that executes a join has terminated 
+ execution of their respective thread function.
+//CONDITION VARIABLES: condition variables are used as a notification system between threads. helps signal and wait mechanism.
+// BARRIERS: Barriers are a method to synchronize a set of threads at some point in time by having all participating threads in 
+ the barrier wait until all threads have called the said barrier function. This, in essence, blocks all threads participating in
+ the barrier until the slowest participating thread reaches the barrier call.
+// SPINLOCKS: Spinning refers to continuously polling until a condition has been met. In the case of spinlocks, if a thread 
+ cannot obtain the mutex, it will keep polling the lock until it is free. The advantage of a spinlock is that the thread is 
+ kept active and does not enter a sleep-wait for a mutex to become available, thus can perform better in certain cases than 
+ typical blocking-sleep-wait style mutexes. Mutexes which are heavily contended are poor candidates for spinlocks. 
+// SEMAPHORES: Semaphores are another type of synchronization primitive that come in two flavors: binary and counting.
+ Binary semaphores act much like simple mutexes, while counting semaphores can behave as recursive mutexes.
+ Counting semaphores can be initialized to any arbitrary value which should depend on how many resources you have available for
+ that particular shared data. Many threads can obtain the lock simultaneously until the limit is reached. This is referred to as 
+ lock depth. Semaphores are more common in multiprocess programming
