@@ -28,7 +28,11 @@ int main()
     //streampos - is type
     //tellp and tellg -  current get and put position
     //seekg and seekp -  change the location of the get and put position
-    
-    
+    //seekg is used to move the stream pointer to reading data from stream
+    //seekp is used to move the stream pointer to write data into stream
+    // std - default namespace in C++
+    //#undef - used to undefine an existing macro defnition
+    //Virtual destructor - A virtual destructor ensures that the objects resources
+    //are released in the reverse order of the object being constructed w.r.t inherited object.
     return 0;
 }
