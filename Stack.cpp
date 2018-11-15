@@ -7,7 +7,7 @@ using namespace std;
 void print(int a[], int n){
     stack<int> s;
     s.push(a[0]);
-    for(int i = 0; i < n; i++){
+    for(int i = 1; i < n; i++){
         if(s.empty())
         {
             s.push(a[i]);
