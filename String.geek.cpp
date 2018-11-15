@@ -68,20 +68,26 @@ const int MAX_CHAR = 26;
 void sortString(string &str) 
 { 
     int charCount[MAX_CHAR] = {0}; 
-    for (int i=0; i<str.length(); i++) 
-        cout<<str[i]-'a'<<charCount[str[i]-'a']++;     
-      
+    for (int i=0; i<str.length(); i++){
+        cout<<str[i]-'a'<<charCount[str[i]-'a']++;   // here it is ++ so count+1
+        cout<<endl;
+    }
     for (int i=0;i<MAX_CHAR;i++) 
-        for (int j=0;j<charCount[i];j++) 
-            cout << (char)('a'+i); 
+    {
+        for (int j=0;j<charCount[i];j++) //< count bcoz count is given +1
+        {
+            cout << (char)('a'+i); //the actual value is obtained
+        }
+            cout<<endl;
+    }
 } 
+//things to consider.. MAX_CHAR 0-25, str[i]-'a' & then char('a'+i)
 int main() 
 { 
     string s = "geeksforgeeks";     
     sortString(s);     
     return 0; 
-} 
-//Array sort
+} //Array sort
 // C++ program to demonstrate default behaviour of 
 // sort() in STL. 
 #include <bits/stdc++.h> 
