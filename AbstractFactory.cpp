@@ -8,6 +8,7 @@
 //*The main difference between the two is that with the Abstract Factory pattern, a class 
 //delegates the responsibility of object instantiation to another object via composition whereas
 //the Factory Method pattern uses inheritance and relies on a subclass to handle the desired object instantiation.*
+//both, defer instantiation to sub classes, factory is doing with inheritance,AF is doing with composition.
 #include <iostream>
 
 class Button
