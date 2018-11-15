@@ -1,7 +1,13 @@
 //Provide an interface for creating families of related or dependent objects without specifying their concrete classes.
 //Abstract Factory pattern lets a class defer instantiation to subclasses.
 //it can be named as Factory and Product Family Method.
-/derived class overrides the factory method and returns an instance of derived class.
+//When u need ur system to be independent of creation aof classes.composed or represented
+//show just the interfaces not the implementation
+//system need to be configured with one of the multiple family of objects.
+//derived class overrides the factory method and returns an instance of derived class.
+//*The main difference between the two is that with the Abstract Factory pattern, a class 
+//delegates the responsibility of object instantiation to another object via composition whereas
+//the Factory Method pattern uses inheritance and relies on a subclass to handle the desired object instantiation.*
 #include <iostream>
 
 class Button
