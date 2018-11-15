@@ -74,3 +74,7 @@ RACE CONDITION: Two or more threads trying to access the shared resource at the 
  Counting semaphores can be initialized to any arbitrary value which should depend on how many resources you have available for
  that particular shared data. Many threads can obtain the lock simultaneously until the limit is reached. This is referred to as 
  lock depth. Semaphores are more common in multiprocess programming
+//A semaphore is a programming construct that helps us achieve concurrency, by implementing both synchronization and mutual exclusion.
+Semaphores are of two types, Binary and Counting. A semaphore has two parts : a counter, and a list of tasks waiting to access a 
+particular resource.
+-also called signaling and locking mechanism
