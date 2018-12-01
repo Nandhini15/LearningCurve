@@ -66,3 +66,99 @@ int main() {
       return -1;
    } 
 } 
+//Template
+//write code once and use it for any data type including user defined data types
+//there is possibility that we need to use different code for a particular data type. ie.whenever that part. data type is called.
+//It is possible in C++ to get a special behavior for a particular data type. This is called template specialization.
+// A generic sort function  
+template <class T> 
+void sort(T arr[], int size) 
+{ 
+    // code to implement Quick Sort 
+} 
+  
+// Template Specialization: A function  
+// specialized for char data type 
+template <> 
+void sort<char>(char arr[], int size) 
+{ 
+    // code to implement counting sort 
+} 
+//Another Example
+#include <iostream> 
+using namespace std; 
+  
+template <class T> 
+void fun(T a) 
+{ 
+   cout << "The main template fun(): " 
+        << a << endl; 
+} 
+  
+template<> 
+void fun(int a) 
+{ 
+    cout << "Specialized Template for int type: "
+         << a << endl; 
+} 
+  
+int main() 
+{ 
+    fun<char>('a'); 
+    fun<int>(10); 
+    fun<float>(10.14); 
+} 
+//Example Class for specialized template
+#include <iostream> 
+using namespace std; 
+  
+template <class T> 
+class Test 
+{ 
+  // Data memnbers of test 
+public: 
+   Test() 
+   { 
+       // Initialization of data members 
+       cout << "General template object \n"; 
+   } 
+   // Other methods of Test 
+}; 
+  
+template <> 
+class Test <int> 
+{ 
+public: 
+   Test() 
+   { 
+       // Initialization of data members 
+       cout << "Specialized template object\n"; 
+   } 
+}; 
+  
+int main() 
+{ 
+    Test<int> a; 
+    Test<char> b; 
+    Test<float> c; 
+    return 0; 
+} 
+//Template metaprogramming - do all the computations at the compile time
+#include <iostream> 
+using namespace std; 
+  
+template<int n> struct funStruct 
+{ 
+    enum { val = 2*funStruct<n-1>::val }; 
+}; 
+  
+template<> struct funStruct<0> 
+{ 
+    enum { val = 1 }; 
+}; 
+  
+int main() 
+{ 
+    cout << funStruct<8>::val << endl; 
+    return 0; 
+}
