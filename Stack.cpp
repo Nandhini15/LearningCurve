@@ -1,3 +1,29 @@
+//print next first largest element
+#include<stdio.h>
+#include<string.h>
+#include <iostream>
+using namespace std;
+// Read only region start
+
+void isMultiple(int a[], int n)
+{
+    for(int i = 0; i < n; i++){
+        for(int j = i +1; j < n; j++){
+            if(a[i]<a[j]){
+                cout<<a[i]<<a[j]<<endl;
+                break;
+            }
+        }
+    }
+		
+}
+int main()
+{
+    int a[] = {11, 13, 21, 3 };
+    int n = sizeof(a)/sizeof(a[0]);
+    isMultiple(a,n);
+    return 0;
+}
 //Print Next Greater element for every element
 #include <iostream>
 #include<bits/stdc++.h>
