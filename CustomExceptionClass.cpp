@@ -171,3 +171,20 @@ int main()
     
     return 0;
 }
+//Nested try catch
+try
+{
+    // ...
+}
+catch (const E&)
+{
+    try
+    {
+        // ...
+    }
+    catch (const F&)
+    {
+
+    }
+}
+//the code i write inside the catch block may itself can throw an exception - so write try and catch inside the same.
