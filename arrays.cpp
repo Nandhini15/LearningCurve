@@ -190,10 +190,11 @@ int getPairsCount(int arr[], int n, int sum)
 { 
     unordered_map<int, int> m; 
     for (int i=0; i<n; i++) 
-        m[arr[i]]++; 
+        cout<<m[arr[i]]++<<endl; 
     int twice_count = 0; 
     for (int i=0; i<n; i++) 
     { 
+        cout<<sum-arr[i]<<m[sum-arr[i]]<<endl;
         twice_count += m[sum-arr[i]]; 
         if (sum-arr[i] == arr[i]) 
             twice_count--; 
