@@ -11,6 +11,8 @@ Write your code in this editor and press "Run" button to compile and execute it.
 
 using namespace std;
 int merge(int a[], int l, int p, int h){
+    //if only two elts then lower n middle ll be the same..if three then 3 distinct values
+    //n1 and n2 contains the values from qs.here 001 ie only two values.so n1 holds 1 and n2 holds 1
     int n1 = p - l + 1;
     int n2 = h - p;
     int L[n1],R[n2];
