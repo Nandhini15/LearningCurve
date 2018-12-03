@@ -16,11 +16,23 @@ struct node* newNode(int idata)
     node->right = NULL;
     return node;
 }
+int countNodes(struct node* root)
+{
+    int count = 0;
+    if(root){
+        count++;
+        count = count + countNodes(root->left);
+        count = count + countNodes(root->right);
+    }
+    return count;
+}
 int main()
 {
     struct node *root = newNode(9);
     root->left = newNode(7);
     root->right = newNode(10);
-    cout<<root->left->data;
+    cout<<root->left->data<<endl;
+    int c = countNodes(root);
+    cout<<c<<endl;
     return 0;
 }
