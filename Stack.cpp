@@ -302,3 +302,87 @@ int main()
         tmpStack.pop(); 
     } 
 } 
+#include<iostream>
+#include<cstdio>
+#include<cstdlib>
+
+using namespace std;
+
+struct node
+{
+    int data;
+    struct node *next;
+};
+class stack{
+   public:
+     struct node * top;
+     stack()
+     {
+         top = NULL;
+     }
+    void push(int);
+     void pop();
+     void display();
+     void search(int);
+};
+void stack::push(int value)
+{
+    struct node * ptr;
+    ptr = new struct node();
+    ptr->data = value;
+    ptr->next = NULL;
+    if(top!= NULL)
+    {
+        ptr->next = top;
+    }
+    top = ptr;
+   
+}
+void stack::pop(){
+    struct node *n;
+    n = top;
+    if(n == NULL){
+     cout<<"empty"<<endl;
+    }
+     cout<<top->data<<"deleted"<<endl;
+    top = top->next;
+    delete n;
+}
+void stack::display()
+{
+  struct node *n;
+  n = top;
+  while(n != NULL){
+      cout<<n->data<<"\n";
+      n = n->next;
+  }
+  cout<<"NULL\n";
+}
+void stack::search(int value)
+{
+    struct node *n;
+    n = top;
+    while(n != NULL)
+    {
+        if(n->data == value)
+        {
+            cout<<n->data<<"found"<<endl;
+        }
+        n = n->next;
+    }
+}
+
+int main()
+{
+  stack s;
+  s.push(34);
+  s.push(3);
+  s.push(31);
+  s.push(40);
+  s.push(50);
+ s.pop();
+ s.search(20);
+ s.display();
+ return 0;
+}
+
